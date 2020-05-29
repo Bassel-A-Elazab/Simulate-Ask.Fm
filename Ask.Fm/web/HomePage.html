@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+
+    </head>
+    <body class="homepage">
+        
+        <div class="login">
+            <div class="container">
+            <form action = "login">
+                E-mail : <input type ="text" name ="email"/>
+                Password : <input type ="text" name ="password"/>
+                <input type ="submit" value ="LogIn"/>
+            </form>
+        </div>
+        </div>
+        <!---->
+        <hr class="hrHome">
+        <div class="create">
+            <div class="container">
+            <form name="create_form" method ="post" action="create" onsubmit="return validateInput() && return_checkEmail()">
+                <table>
+                    <tr>
+                        <td><label>First Name : </label></td>
+                        <td>            <input type = "text" name = "fname" onblur = "validateFName()" onfocus = "focusFName()" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Last Name : </label></td>
+                        <td> <input type = "text" name = "lname" onblur = "validateLName()" onfocus = "focusLName()" />
+                            <p id = "name"></p></td>
+                    </tr>
+                    <tr>
+                        <td><label>E-mail : </label></td>
+                        <td><input type = "text" name="cemail" id="cemail"  onkeyup="load()" onblur = "validateEmail()" onfocus = "focusEmail()" placeholder ="@bassel.com" />
+                            <p id = "email"></p>
+                            <p id ="demo"></p></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password : </label></td>
+                        <td><input type = "text" name = "pass1" onblur = "validatePass1()" onfocus = "focusPass1()" />
+                            <p id = "pass1"></p></td>
+                    </tr>
+                    <tr>
+                        <td><label>Re-enter Password : </label></td>
+                        <td><input type = "text" name = "pass2" onblur = "validatePass2()" onfocus = "focusPass2()" />
+                            <p id = "pass2"></p></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><input type ="submit" id="submit" name="submit" value="Create An Account"/></th>
+                    </tr>
+                </table>
+            </form>
+            </div>
+        </div>
+
+        <script src="script file/main.js"></script>
+    </body>
+</html>
